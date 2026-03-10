@@ -25,18 +25,12 @@
     }
 
     .avatar {
-      width: 96px;
-      height: 96px;
+      width: 112px;
+      height: 112px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin: 0 auto 1.25rem;
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 1px;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.15);
     }
 
     h1 {
@@ -95,7 +89,7 @@
 </head>
 <body>
   <div class="card">
-    <div class="avatar">BJ</div>
+    <img class="avatar" src="headshot.jpg" alt="Bruce Johnson">
     <h1>Bruce Johnson</h1>
     <p class="title">Sales Engineer Manager at Delinea</p>
     <p class="tagline">Helping organizations secure privileged access</p>
