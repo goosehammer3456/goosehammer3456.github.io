@@ -7,6 +7,7 @@ Personal "link in bio" page for Bruce Johnson — Sales Engineer Manager at Deli
 ## Features
 
 - Clean, modern single-page design with Delinea brand green theming
+- Official Delinea logo branding
 - Dark/light mode toggle with persistent user preference (localStorage)
 - Animated page load entrances (staggered fade-up)
 - Hover effects on link cards (lift, glow shadow)
@@ -19,11 +20,12 @@ Personal "link in bio" page for Bruce Johnson — Sales Engineer Manager at Deli
 - LinkedIn
 - Delinea website
 
-## Tech Stack
+## Files
 
-- Single `index.html` file — no frameworks, no build step
-- Pure HTML, CSS, and vanilla JavaScript
-- Hosted on GitHub Pages
+- `index.html` — Main page (HTML, CSS, and vanilla JavaScript)
+- `headshot.jpg` — Profile photo
+- `favicon.svg` — Browser tab icon
+- `delinea-logo.svg` — Official Delinea wordmark logo
 
 ## Local Development
 
