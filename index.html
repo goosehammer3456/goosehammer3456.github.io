@@ -175,6 +175,27 @@
     .links .fade-up:nth-child(1) { animation-delay: 0.35s; }
     .links .fade-up:nth-child(2) { animation-delay: 0.42s; }
     .links .fade-up:nth-child(3) { animation-delay: 0.49s; }
+
+    .branding {
+      margin-top: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.6s;
+    }
+
+    .branding img {
+      height: 28px;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .branding img:hover {
+      opacity: 0.8;
+    }
+
+    [data-theme="light"] .branding img {
+      filter: brightness(0) saturate(100%) invert(25%) sepia(90%) saturate(1500%) hue-rotate(130deg);
+    }
   </style>
 </head>
 <body>
@@ -187,7 +208,7 @@
     <img class="avatar fade-up" src="headshot.jpg" alt="Bruce Johnson">
     <h1 class="fade-up">Bruce Johnson</h1>
     <p class="title fade-up">Sales Engineer Manager at Delinea</p>
-    <p class="tagline fade-up">Helping organizations secure privileged access</p>
+    <p class="tagline fade-up">Leading sales engineering teams that turn complex security into confident buying decisions</p>
 
     <div class="links">
       <a class="fade-up" href="https://outlook.office.com/bookwithme/user/88d4cdfa6c614bc0a9d45269d748e387@delinea.com/meetingtype/_-gBotxzXUCnvwcgtHUIXA2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" rel="noopener">
@@ -201,6 +222,12 @@
       <a class="fade-up" href="https://delinea.com" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
         Delinea
+      </a>
+    </div>
+
+    <div class="branding">
+      <a href="https://delinea.com" target="_blank" rel="noopener">
+        <img src="delinea-logo.svg" alt="Delinea">
       </a>
     </div>
   </div>
