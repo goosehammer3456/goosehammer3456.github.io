@@ -196,6 +196,22 @@
     [data-theme="light"] .branding img {
       filter: brightness(0) saturate(100%) invert(25%) sepia(90%) saturate(1500%) hue-rotate(130deg);
     }
+
+    .visitor-count {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.7s;
+      transition: color 0.4s;
+    }
+
+    .visitor-count span {
+      font-weight: 600;
+      color: var(--text-tertiary);
+      transition: color 0.4s;
+    }
   </style>
 </head>
 <body>
@@ -230,6 +246,8 @@
         <img src="delinea-logo.svg" alt="Delinea">
       </a>
     </div>
+
+    <p class="visitor-count">Page views: <span id="visit-count">...</span></p>
   </div>
 
   <script>
@@ -250,6 +268,16 @@
     });
 
     setTheme(localStorage.getItem('theme') || 'dark');
+
+    // Visitor counter API
+    fetch('https://api.counterapi.dev/v1/goosehammer3456/visits/up')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visit-count').textContent = data.count.toLocaleString();
+      })
+      .catch(() => {
+        document.getElementById('visit-count').textContent = '—';
+      });
   </script>
 </body>
 </html>
